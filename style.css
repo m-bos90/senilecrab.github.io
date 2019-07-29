@@ -1,11 +1,10 @@
-
 body, html {
   width: 100%;
   height: 100%;
 }
 
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 hr {
@@ -16,6 +15,14 @@ hr {
 
 .faded {
   color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+}
+
+.faded:hover {
+  text-shadow: 0 0 5px #ff0000;
+  cursor: pointer;
+  color: white!important;
+  transition: 0.3s;
 }
 
 header.startup {
@@ -23,7 +30,6 @@ header.startup {
   background-image: url("header.jpg");
   background-size: cover;
   height: 100%;
-  background-color: black;
 }
 
 header.startup hr {
@@ -31,43 +37,54 @@ header.startup hr {
   margin-bottom: 30px;
 }
 
-h1 {
-  display: inline;
-  text-align: center;
-}
-
 header.startup h1 {
   font-size: 2rem;
-  text-align: center;
 }
 
 .btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 300px;
+  font-family: 'Montserrat', serif;
   box-shadow: 0 .1875rem .1875rem 0 rgba(0,0,0,.1) !important;
   padding: 1.25rem 2rem;
-  font-family: 'Lora', serif;
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: .15rem;
   border: 0;
 }
 
+.btn-xl {
+  padding: 1rem 2rem;
+  border-color: darkred!important;
+}
+
 .btn-primary {
-  background-color: $primary;
+  background-color: darkred!important;
+  border-color: darkred!important;
+  background-color: darkred!important;
   &:hover {
-    background-color: darken($primary, 10%);
+    background-color: darken($primary, 10%)!important;
   }
   &:focus {
-    background-color: darken($primary, 10%);
-    color: white;
+    background-color: darken($primary, 10%) !important;
+    color: black;
   }
   &:active {
     background-color: darken($primary, 15%) !important;
   }
 }
 
-.container {
-  display: flex; /* or inline-flex */
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: baseline;
+.btn-primary:hover {
+  border-color: darkred!important;
+  cursor: pointer;
+  background-color:darkred!important;
+  opacity:0.5;
+  border-radius:30px;
+}
+
+.btn:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+  transition: 0.1s;
 }
